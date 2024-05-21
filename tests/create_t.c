@@ -9,7 +9,7 @@
 
 int main(void)
 {
-    linkedHandler_t *handler = linkedHandler_create();
+    linked_handler_t *handler = linked_handler_create();
 
     assert(handler != NULL);
     assert(handler->node == NULL);

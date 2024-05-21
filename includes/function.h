@@ -3,15 +3,20 @@
 ** Cshared_library_workshop
 ** File description:
 ** all function prototyping
+** should not be included in the program that use this library
 */
 #pragma once
 #include <stdbool.h>
-typedef struct linkedHandler_s linkedHandler_t;
 
-void linkedHandler_destroy(linkedHandler_t **handler);
+typedef struct linked_handler_s linked_handler_t;
 
-bool linkedHandler_add_node(linkedHandler_t *handler, const void *data, const char *name);
+void linked_handler_destroy(linked_handler_t **handler);
 
-bool linkedHandler_remove_node(linkedHandler_t *handler, const char *name);
+bool linked_handler_add_node(linked_handler_t *handler,
+    const void *data, const char *name);
 
-void *linkedHandler_get_node_data(linkedHandler_t *handler, const char *name);
+bool linked_handler_remove_node(linked_handler_t *handler,
+    const char *name);
+
+void *linked_handler_get_node_data(linked_handler_t *handler,
+    const char *name);

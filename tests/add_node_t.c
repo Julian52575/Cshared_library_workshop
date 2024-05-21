@@ -8,7 +8,7 @@
 #include <assert.h>
 
 static void
-remove_node(linkedHandler_t *handler)
+remove_node(linked_handler_t *handler)
 {
     assert(handler->remove_node(handler, "First") == true);
     assert(handler->remove_node(handler, "Second") == true);
@@ -26,7 +26,7 @@ static void check_data(int *ptr, int value)
     assert(*ptr == value);
 }
 static void
-get_node_data(linkedHandler_t *handler)
+get_node_data(linked_handler_t *handler)
 {
     int *ptr = NULL;
 
@@ -49,7 +49,7 @@ get_node_data(linkedHandler_t *handler)
 }
 
 static void
-add_node(linkedHandler_t *handler)
+add_node(linked_handler_t *handler)
 {
     static int first = 1;
     static int second = 2;
@@ -63,7 +63,7 @@ add_node(linkedHandler_t *handler)
     assert(handler->add_node(handler, &fourth, "Fourth") == true);
     assert(handler->add_node(handler, &fifth, "Fifth") == true);
     assert(handler->add_node(handler, NULL, "Null") == true);
-    
+
     assert(handler->add_node(handler, &first, NULL) == false);
 
     assert(handler->add_node(handler, &fifth, "Duplicate") == true);
@@ -73,7 +73,7 @@ add_node(linkedHandler_t *handler)
 
 int main(void)
 {
-    linkedHandler_t *handler = linkedHandler_create();
+    linked_handler_t *handler = linked_handler_create();
 
     malloc(1);
     assert(handler != NULL);

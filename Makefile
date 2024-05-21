@@ -12,8 +12,8 @@ NC=\033[0m # No Color
 NAME 		=	liblinked.so
 
 SRC_DIR 	=	src
-SRC_FILES 	=	linkedHandler_create.c \
-					linkedHandler_node.c
+SRC_FILES 	=	linkedhandler_create.c \
+			linkedhandler_manage_node.c
 SRC_PATH	=	$(patsubst %,$(SRC_DIR)/%,$(SRC_FILES))
 
 OBJ_DIR 	= 	obj

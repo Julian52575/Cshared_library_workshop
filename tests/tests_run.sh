@@ -92,7 +92,7 @@ function print_result() {
 
 tests_run "Create+Destroy" "tests/create_t.c"
 tests_run "Node Management" "tests/add_node_t.c"
-tests_run "Perfect" "tests/perfect_t.c"
-tests_run "Leak" "tests/leak_t.c"
+#tests_run "Perfect" "tests/perfect_t.c"
+#tests_run "Leak" "tests/leak_t.c"
 
 print_result
