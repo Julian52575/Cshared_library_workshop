@@ -33,7 +33,8 @@ Here are the steps to link a library to a binary:
 
 # About the workshop
 This workshop will teach you about shared libraries and how helpful they can be in your C / C++ project by creating a simple library that manages linked lists !    
-You will have to code 
+We will code the function in the `src` folder. The `linked_handler` and `linked` structures, the Makefile and some tests are provided.    
+Refer to #compiling if you want to compie your own program with the library.
 
 # Prerequisites
 Gcc and make installed.
