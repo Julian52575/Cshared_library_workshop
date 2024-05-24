@@ -9,6 +9,5 @@
 
 void linked_handler_debug(const struct linked_handler_s *this)
 {
-    printf("Handler at address %p of %lu elements:\n",
-        this, this->get_size(this));
+    return;
 }
