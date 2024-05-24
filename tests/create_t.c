@@ -13,7 +13,7 @@ test_function(linked_handler_t *handler)
 {
     assert(handler->add_node == linked_handler_add_node);
     assert(handler->destroy == linked_handler_destroy);
-    assert(handler->get_node_data == (void*) linked_handler_get_node_data);
+    assert(handler->get_node == (void *) linked_handler_get_node);
     assert(handler->remove_node == linked_handler_remove_node);
     assert(handler->get_size == linked_handler_get_size);
 }

@@ -13,20 +13,21 @@ NAME 		=	liblinked.so
 
 SRC_DIR 	=	src
 SRC_FILES 	=	linkedhandler_create.c \
-			linkedhandler_manage_node.c
+				linkedhandler_manage_node.c \
+				linkedhandler_debug.c
 SRC_PATH	=	$(patsubst %,$(SRC_DIR)/%,$(SRC_FILES))
 
 OBJ_DIR 	= 	obj
 OBJ_FILES 	=	$(patsubst %.c,%.o,$(SRC_FILES))
 OBJ_DIR_FILES	=	$(patsubst %,$(OBJ_DIR)/%,$(OBJ_FILES))
 
-CFLAGS 		=	-Wall -Wextra
+CFLAGS 		=	-Wall -Wextra -c -fPIC -g
 INCLUDES 	=	-iquote./includes/
 
 #build the object file
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	@echo -e "$(YEL)\tBuilding $@...$(NC)"
-	gcc -c -o $@ $< $(CFLAGS) $(INCLUDES)
+	gcc -o $@ $< $(CFLAGS) $(INCLUDES)
 
 all: $(OBJ_DIR_FILES)
 	@gcc -shared -fPIC $(OBJ_DIR)/*.o -o $(NAME)

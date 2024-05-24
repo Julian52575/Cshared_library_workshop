@@ -19,7 +19,9 @@ bool linked_handler_add_node(linked_handler_t *handler,
 bool linked_handler_remove_node(linked_handler_t *handler,
     const char *name);
 
-void *linked_handler_get_node_data(linked_handler_t *handler,
+linked_t *linked_handler_get_node(const linked_handler_t *handler,
     const char *node_name);
 
 size_t linked_handler_get_size(const struct linked_handler_s *this);
+
+void linked_handler_debug(const struct linked_handler_s *this);

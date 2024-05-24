@@ -18,6 +18,7 @@ FAILURE=0
 BAD_LOG="tests/.lematch.log"
 echo -n "" > ${BAD_LOG}
 VG_LOG="tests/.vglog"
+rm tests/log/*.log || true
 
 #LEAK
 function check_leak() {
@@ -25,7 +26,7 @@ function check_leak() {
     allocs=$(echo "$STRING" | grep -oE '[0-9]+ allocs' | awk '{print $1}')
     frees=$(echo "$STRING" | grep -oE '[0-9]+ frees' | awk '{print $1}')
 
-    if [ "$allocs" -eq "$frees" ]
+    if [[ "$allocs" -eq "$frees" ]]
     then
         return 0
     fi
@@ -90,9 +91,7 @@ function print_result() {
     return
 }
 
-tests_run "Create+Destroy" "tests/create_t.c"
-tests_run "Node Management" "tests/add_node_t.c"
-#tests_run "Perfect" "tests/perfect_t.c"
-#tests_run "Leak" "tests/leak_t.c"
+tests_run "Create&Destroy" "tests/create_t.c"
+tests_run "Node_Management" "tests/add_node_t.c"
 
 print_result
