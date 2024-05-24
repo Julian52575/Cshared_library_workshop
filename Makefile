@@ -42,7 +42,7 @@ fclean: clean
 
 re: fclean all
 
-tests_run:
+tests_run: re
 	./tests/tests_run.sh
 
 .Phony: all clean fclean re

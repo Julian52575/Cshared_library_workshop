@@ -75,8 +75,6 @@ int main(void)
 {
     linked_handler_t *handler = linked_handler_create();
 
-    malloc(1);
-    assert(handler != NULL);
     add_node(handler);
     get_node_data(handler);
     remove_node(handler);

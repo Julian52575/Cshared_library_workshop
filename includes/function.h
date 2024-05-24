@@ -7,6 +7,7 @@
 */
 #pragma once
 #include <stdbool.h>
+#include <stddef.h>
 
 typedef struct linked_handler_s linked_handler_t;
 
@@ -19,4 +20,6 @@ bool linked_handler_remove_node(linked_handler_t *handler,
     const char *name);
 
 void *linked_handler_get_node_data(linked_handler_t *handler,
-    const char *name);
+    const char *node_name);
+
+size_t linked_handler_get_size(const struct linked_handler_s *this);

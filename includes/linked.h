@@ -42,7 +42,7 @@ typedef struct linked_handler_s {
         /**
          * @return True si la déstruction s'est éffectuée correctement
          * @brief   Détruit une node du gestionnaire
-         *(la donnée n'est pas détruite)
+         *(Le pointeur sur la donnée stockée (data) n'est pas détruit)
          * @param this L'instance de linked_handler à mettre à jour
          * @param node_name Le nom de l'élement à retirer */
     bool (*remove_node)(struct linked_handler_s *this,
