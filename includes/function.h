@@ -10,6 +10,7 @@
 #include <stddef.h>
 
 typedef struct linked_handler_s linked_handler_t;
+typedef struct linked_s linked_t;
 
 void linked_handler_destroy(linked_handler_t **handler);
 

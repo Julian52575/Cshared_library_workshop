@@ -19,12 +19,10 @@ typedef struct linked_s {
         //  Vous pouvez ajouter des éléments à la structure...
 } linked_t;
 
-
         /**
          * @brief Un gestionnaire de liste chainée */
 typedef struct linked_handler_s {
     linked_t *node;
-    size_t element;
         //  Vous pouvez ajouter des éléments à la structure...
 
         /**

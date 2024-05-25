@@ -9,6 +9,7 @@
 #include <assert.h>
 #include <string.h>
 #include <stdio.h>
+#include <stdint.h>
 
 bool linked_handler_add_node(linked_handler_t *handler,
     const void *data, const char *name)
@@ -30,5 +31,5 @@ linked_t *linked_handler_get_node(linked_handler_t *handler,
 
 size_t linked_handler_get_size(const struct linked_handler_s *this)
 {
-    return this->element;
+    return SIZE_MAX;
 }
