@@ -20,6 +20,11 @@ echo -n "" > ${BAD_LOG}
 VG_LOG="tests/.vglog"
 rm tests/log/*.log || true
 
+trap ctrl_c INT
+function ctrl_c() {
+        echo "Ctrl + C happened"
+}
+
 #LEAK
 function check_leak() {
     STRING=$(cat $VG_LOG | grep "total heap usage:")
