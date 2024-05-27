@@ -2,7 +2,7 @@
 ## EPITECH PROJECT, 2024
 ## myteams
 ## File description:
-## build the ftp lib
+## build the linked lib
 ##
 YEL=\033[1;33m
 GRN='\033[0;32m'
