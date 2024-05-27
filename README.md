@@ -25,7 +25,7 @@ Shared library are a way to store compiled functions in a non-executable file to
 Take any graphical library (_sfml_ in this example). You can link the sfml library using the `-lsfml` flag in gcc to gain access to all the provided function.
 
 # Compiling
-Compiling a shared library is really straighforward: compile your source `.c`/ `.cpp` into object file `.o` using the `-c` flag of gcc. Then compile all your object file into a `.so` file using the `-shared -fPIC` flags.    
+Compiling a shared library is really straighforward: compile your source `.c`/ `.cpp` into object file `.o` using both the `-c` and the `-fPIC` flag of gcc. Then compile all your object file into a `.so` file using the `-shared -fPIC` flags.    
 You can also use the provided Makefile as long as you update the `SRC_FILES` variable.    
 Here are the steps to link a library to a binary:
 1. `export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:./_path_your_library_` This will update the list of path that stores libraries.
