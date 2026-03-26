@@ -1,3 +1,5 @@
+Find the accompagning powerpoint presentation (in French) [here](https://www.canva.com/design/DAGDOW1ezLE/2Oe1bRB1Zs-_Opd2dhCoIw/edit?utm_content=DAGDOW1ezLE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) !
+
 <h1>C / C++ shared library workshop</h1>
 <!-- TABLE OF CONTENTS -->
   <ol>
